@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=KernelSU by KernelSU Developers
+kernel.string=KernelSU Next | SukiSU Ultra GKI Kernel with SUSFS
 do.devicecheck=0
 do.modules=0
 do.systemless=0
@@ -19,7 +19,6 @@ supported.versions=
 supported.patchlevels=
 supported.vendorpatchlevels=
 '; } # end properties
-
 
 ### AnyKernel install
 ## boot shell variables
@@ -40,6 +39,7 @@ case $kernel_version in
     *) ksu_supported=false ;;
 esac
 
+ui_print "Made by @Rembo404"
 ui_print " " "  -> ksu_supported: $ksu_supported"
 $ksu_supported || abort "  -> Non-GKI device, abort."
 
